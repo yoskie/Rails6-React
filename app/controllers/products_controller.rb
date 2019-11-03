@@ -5,5 +5,4 @@ class ProductsController < ApplicationController
 
   private
 
-
 end
