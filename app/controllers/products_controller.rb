@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "Product has been saved"
       redirect_to root_path
     else
-      flash[:alart] = "Product has not been saved"
+      flash.now[:alart] = "Product has not been saved"
       render :new
     end
   end
@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "Product has been updated"
       redirect_to root_path
     else
-      flash[:alert] = "Product has not been updated"
+      flash.now[:alert] = "Product has not been updated"
       render :edit
     end
   end
