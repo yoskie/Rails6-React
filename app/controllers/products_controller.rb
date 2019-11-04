@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :require_signin, execpt: [:index, :show]
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
