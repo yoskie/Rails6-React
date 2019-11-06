@@ -1,7 +1,9 @@
 import React from "react";
 
 const Footer = () => (
-  <div>Footer Component</div>
+  <footer className="text-center">
+    Copyright &copy;2019 Emmanuel Asante
+  </footer>
 )
 
 export default Footer
