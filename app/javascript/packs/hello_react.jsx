@@ -10,6 +10,21 @@ const Hello = props => (
   <div>Hello {props.name}!</div>
 )
 
+
+
+// class based replacement
+// class Hello extends React.Components {
+//   constructor(props) {
+//     super(props)
+//   }
+//
+//   render() {
+//     return (
+//       <div>Hello {this.props.name}!</div>
+//     )
+//   }
+// }
+
 Hello.defaultProps = {
   name: 'David'
 }
