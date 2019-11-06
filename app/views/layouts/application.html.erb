@@ -11,15 +11,14 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
 
-    <%= render 'shared/messages' %>
+    <div id='root'>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
-
-    <%= render 'shared/footer' %>
-
-    <div id='root'></div>
+    <%#= render 'shared/header' %>
+    <%#= render 'shared/messages' %>
+    <%#= render 'shared/footer' %>
 
   </body>
 </html>
