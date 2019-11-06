@@ -4,7 +4,7 @@ import Product from '../components/products/Product'
 
 const ProductList = () => {
   const products = ['Product1', 'Product2', 'Product3']
-  const productList = products.map((product) => <Product />)
+  const productList = products.map((product) => <Product key={product} />)
 
   return (
     <div className="container">
