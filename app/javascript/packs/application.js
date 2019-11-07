@@ -23,7 +23,7 @@ import PropTypes from 'prop-types'
 import App from '../containers/App'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root')
+  const root = document.querySelector('#root')
 
   ReactDOM.render( <App />, root)
 })
