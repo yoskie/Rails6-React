@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "api/v1/products#index"
+
   namespace :api do
     namespace :v1 do
       resources :products do
@@ -10,19 +12,21 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'users/new', to: 'users#new', as: 'new_user'
-  get '/signup', to: 'users#new'
-  get '/signin', to: 'sessions#new'
-  post '/signin', to: 'sessions#create'
-  delete '/signout', to: 'sessions#destroy', as: 'session'
+  get '*path', to: 'api/v1/products#index'
 
-  resources :users, only: [:create]
-
-  root to: "products#index"
-
-  resources :products do
-    resources :comments, only: [:create]
-  end
+  # get 'users/new', to: 'users#new', as: 'new_user'
+  # get '/signup', to: 'users#new'
+  # get '/signin', to: 'sessions#new'
+  # post '/signin', to: 'sessions#create'
+  # delete '/signout', to: 'sessions#destroy', as: 'session'
+  #
+  # resources :users, only: [:create]
+  #
+  #
+  #
+  # resources :products do
+  #   resources :comments, only: [:create]
+  # end
   # get '/products',          to: 'products#index'
   # get '/products/new',      to: 'products#new', as: 'new_product'
   # get '/products/:id',      to: 'products#show', as: 'product'
