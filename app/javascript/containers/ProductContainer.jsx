@@ -29,7 +29,7 @@ class ProductList extends React.Component {
   render () {
     const { products } = this.state
     const productList = products.map(
-      (product) => <Product key={product.id} />
+      product => <Product key={product.id} product={product} />
     )
 
     return (
@@ -48,8 +48,6 @@ class ProductList extends React.Component {
       </div>
     )
   }
-
-
 
 }
 
