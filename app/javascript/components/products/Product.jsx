@@ -11,7 +11,7 @@ const Product = ({ product }) => (
           <span className="badge badge-pill badge-purple float-right">
             {product.price}
           </span>
-          <Link to={'/detail'}>
+          <Link to={`/products/${product.id}`}>
             {product.name}
           </Link>
         </h5>
