@@ -14,6 +14,19 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path='/' component={ProductList}/>
+
+        <Route render={() => (
+          <div className="container">
+            <div className="row">
+              <div className="card col-md8 offset-md-4 form-header-style">
+                <h1 className="text-center m-4">404: Not Fount</h1>
+                <p className="text-center m-4">
+                  The resource you are looking for could not be found
+                </p>
+              </div>
+            </div>
+          </div>
+        )} />
       </Switch>
       <Footer />
     </React.Fragment>
