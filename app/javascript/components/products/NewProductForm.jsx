@@ -69,6 +69,8 @@ class NewProductForm extends Component {
                       <input
                         type="text"
                         name="price"
+                        value={this.state.price}
+                        onChange={this.handleChange}
                         id="price"
                         className="form-control"
                         placeholder="Item price"/>
@@ -82,8 +84,16 @@ class NewProductForm extends Component {
                       Description
                     </label>
                     <div className="col-md-9">
-                      <textarea name="description" id="description" className="form-control"
-                                placeholder="Item description here" rows="5"></textarea>
+                      <textarea
+                        name="description"
+                        value={this.state.description}
+                        onChange={this.handleChange}
+                        id="description"
+                        className="form-control"
+                        placeholder="Item description here"
+                        rows="5"
+                      >
+                      </textarea>
                     </div>
                   </div>
 
