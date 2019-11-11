@@ -6,6 +6,7 @@ import Footer from '../components/shared/Footer'
 
 import ProductList from './ProductContainer'
 import ProductDetail from './ProductDetailContainer'
+import NewProductForm from '../components/products/NewProductForm'
 
 
 
@@ -16,6 +17,7 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={ProductList}/>
         <Route path='/products/:id' component={ProductDetail} />
+        <Route path='/newProduct' component={NewProductForm} />
 
         <Route render={() => (
           <div className="container">
