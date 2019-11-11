@@ -1,6 +1,26 @@
 import React, { Component } from 'react'
 
 class NewProductForm extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      name: '',
+      description: '',
+      price: '',
+      quantity: '',
+      errors: {}
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    console.log("Handing submit")
+    console.log(this.state)
+  }
+
   render() {
     const buttonText = "Create Product"
     const title = "Add New Product"
@@ -15,7 +35,7 @@ class NewProductForm extends Component {
               </h1>
 
               <div className="form-body-style px-5 pt-4">
-                <form>
+                <form className="form-horizontal" onSubmit={this.handleSubmit}>
                   <div className="form-group row">
                     <label
                       htmlFor="name"
