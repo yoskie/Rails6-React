@@ -14,8 +14,23 @@ class NewProductForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log("Handing submit")
-    console.log(this.state)
+
+    const { name, description, price, quantity } = this.state
+
+    const newProduct = {
+      name,
+      description,
+      price,
+      quantity
+    }
+
+    this.props.onSubmit(newProduct)
+    this.setState({
+      name: '',
+      price: '',
+      description: '',
+      quantity: ''
+    })
   }
 
   handleChange = (event) => {
