@@ -90,6 +90,24 @@ class NewProductForm extends Component {
 
                   <div className="form-group row">
                     <label
+                      htmlFor="Quantity"
+                      className="col-md-3 col-form-label">
+                      Quantity
+                    </label>
+                    <div className="col-md-9">
+                      <input
+                        type="number"
+                        name="quantity"
+                        value={this.state.quantity}
+                        onChange={this.handleChange}
+                        id="quantity"
+                        className="form-control"
+                        placeholder="Item quantity"/>
+                    </div>
+                  </div>
+
+                  <div className="form-group row">
+                    <label
                       htmlFor="description"
                       className="col-md-3 col-form-label">
                       Description
