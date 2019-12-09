@@ -63,6 +63,13 @@ class NewProductForm extends Component {
     return error
   }
 
+  handleBlur = (event) => {
+    const { name } = event.target
+    const fieldError = this.checkErrors(this.state, name)
+    const errors = Object.assign({}, this.state.errors, fieldError)
+    this.setState({ errors })
+  }
+
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value })
   }
@@ -94,6 +101,7 @@ class NewProductForm extends Component {
                         name="name" id="name"
                         value={this.state.name}
                         onChange={this.handleChange}
+                        onBlur={this.handleBlur}
                         className="form-control"
                         placeholder="Item name"
                         autoFocus={true} />
@@ -112,6 +120,7 @@ class NewProductForm extends Component {
                         name="price"
                         value={this.state.price}
                         onChange={this.handleChange}
+                        onBlur={this.handleBlur}
                         id="price"
                         className="form-control"
                         placeholder="Item price"/>
@@ -130,6 +139,7 @@ class NewProductForm extends Component {
                         name="quantity"
                         value={this.state.quantity}
                         onChange={this.handleChange}
+                        onBlur={this.handleBlur}
                         id="quantity"
                         className="form-control"
                         placeholder="Item quantity"/>
@@ -147,6 +157,7 @@ class NewProductForm extends Component {
                         name="description"
                         value={this.state.description}
                         onChange={this.handleChange}
+                        onBlur={this.handleBlur}
                         id="description"
                         className="form-control"
                         placeholder="Item description here"
