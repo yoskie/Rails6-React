@@ -49,12 +49,12 @@ class NewProductForm extends Component {
         break
       case 'price':
         if (parseFloat(state.price) <= 0.0 ||
-            !state.price.toString().match(/^\d{1,}(\.\d{0,2})?$)) {
+            !state.price.toString().match(/^\d{1,}(\.\d{0,2})?$/)){
           error.price = 'Price has to be a positive number'
         }
         break
       case 'quantity':
-        if (parseInt(state.quaitty, 10) <= 0 ||
+        if (parseInt(state.quantity, 10) <= 0 ||
             !state.quantity.toString().match(/^\d{1,}$/)){
           error.description = 'Quantity has to be a positive whole number'
         }
